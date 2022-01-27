@@ -1,0 +1,34 @@
+,Column Used,Best Estimator,Train Score,Test Score,True Positive,True Negative,False Positive,False Negative
+0,lemma_title,"Pipeline(steps=[('tvec',
+                 TfidfVectorizer(max_features=5000, ngram_range=(1, 2))),
+                ('nb', MultinomialNB())])",0.9604477611940299,0.7196969696969697,225,250,80,105
+1,lemma_title,"Pipeline(steps=[('cvec',
+                 CountVectorizer(max_df=0.3, max_features=2000,
+                                 ngram_range=(1, 2))),
+                ('nb', MultinomialNB())])",0.891044776119403,0.6954545454545454,210,249,81,120
+2,lemma_title,"Pipeline(steps=[('cvec',
+                 CountVectorizer(max_features=1500, min_df=4,
+                                 ngram_range=(1, 3))),
+                ('tfidf', TfidfTransformer()),
+                ('rf', RandomForestClassifier())])",0.9514925373134329,0.6787878787878788,242,206,124,88
+3,stem_title,"Pipeline(steps=[('tvec',
+                 TfidfVectorizer(max_features=4000, ngram_range=(1, 2))),
+                ('nb', MultinomialNB())])",0.9485074626865672,0.7151515151515152,228,244,86,102
+4,stem_title,"Pipeline(steps=[('cvec', CountVectorizer(max_df=0.3, max_features=2000)),
+                ('nb', MultinomialNB())])",0.908955223880597,0.7318181818181818,234,249,81,96
+5,stem_title,"Pipeline(steps=[('cvec',
+                 CountVectorizer(max_features=1500, min_df=4,
+                                 ngram_range=(1, 3))),
+                ('tfidf', TfidfTransformer()),
+                ('rf', RandomForestClassifier())])",0.9597014925373134,0.6863636363636364,240,213,117,90
+6,title,"Pipeline(steps=[('tvec',
+                 TfidfVectorizer(max_features=4000, ngram_range=(1, 2),
+                                 stop_words='english')),
+                ('nb', MultinomialNB())])",0.9626865671641791,0.7712121212121212,247,262,68,83
+7,title,"Pipeline(steps=[('cvec', CountVectorizer(max_df=0.4, max_features=1500)),
+                ('nb', MultinomialNB())])",0.908955223880597,0.7636363636363637,251,253,77,79
+8,title,"Pipeline(steps=[('cvec',
+                 CountVectorizer(max_features=2000, min_df=4,
+                                 ngram_range=(1, 3))),
+                ('tfidf', TfidfTransformer()),
+                ('rf', RandomForestClassifier())])",0.9873134328358208,0.7151515151515152,234,238,92,96
